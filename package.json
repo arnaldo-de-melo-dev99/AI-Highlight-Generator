@@ -1,0 +1,38 @@
+{
+  "name": "ai",
+  "version": "1.0.0",
+  "description": "This project is a digital platform designed to help users schedule and organize personal goals in a simple and visual way, similar to Trello.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx server/src/http/server.ts",
+    "dev": "tsx --env-file .env --watch server/src/http/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnaldo-de-melo-dev99/AI-Highlight-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/arnaldo-de-melo-dev99/AI-Highlight-Generator/issues"
+  },
+  "homepage": "https://github.com/arnaldo-de-melo-dev99/AI-Highlight-Generator#readme",
+  "devDependencies": {
+    "@biomejs/biome": "2.4.9",
+    "@types/node": "^25.5.0",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^3.3.0",
+    "dotenv": "^17.3.1",
+    "drizzle-orm": "^0.45.2",
+    "fastify": "^5.8.4",
+    "postgres": "^3.4.8",
+    "zod": "^4.3.6"
+  }
+}
