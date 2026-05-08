@@ -3,20 +3,20 @@ import { createId } from "@paralleldrive/cuid2";
 import { create } from "node:domain";
 
 export const goals = pgTable("goals", {
-  id: text("id").primaryKey().$defaultFn(() => createId()),
-  title: text("title").notNull(),
-  desiredWeeklyFrequency: integer("desired_weekly_frequency").notNull(),
-  createdAt: timestamp("created_at", { withTimezone: true })
+  id: text('id').primaryKey().$defaultFn(() => createId()),
+  title: text('title').notNull(),
+  desiredWeeklyFrequency: integer('desired_weekly_frequency').notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true })
     .notNull()
     .defaultNow(),
 });
 
 export const goalCompletions = pgTable("goal_completions", {
-  id: text("id").primaryKey().$defaultFn(() => createId()),
-  goalId: integer("goal_id")
+  id: text('id').primaryKey().$defaultFn(() => createId()),
+  goalId: integer('goal_id')
     .references(() => goals.id)
     .notNull(),
-  completedAt: timestamp("completed_at", { withTimezone: true })
+  completedAt: timestamp('completed_at', { withTimezone: true })
     .notNull()
     .defaultNow(),
 });
