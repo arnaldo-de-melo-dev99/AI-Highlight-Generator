@@ -21,7 +21,8 @@
     "dev": "tsx --env-file .env --watch server/src/http/server.ts",
     "seed": "tsx --env-file .env server/src/db/seed.ts",
     "migrate": "drizzle-kit migrate --config drizzle.config.ts",
-    "generate": "drizzle-kit generate --config drizzle.config.ts"
+    "generate": "drizzle-kit generate --config drizzle.config.ts",
+    "studio": "drizzle-kit studio --config drizzle.config.ts --port 4984"
   },
   "dependencies": {
     "@paralleldrive/cuid2": "^3.3.0",
