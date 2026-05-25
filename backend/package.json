@@ -1,0 +1,45 @@
+{
+  "name": "inorbit",
+  "version": "1.0.0",
+  "description": "This project is a digital platform designed to help users schedule and organize personal goals in a simple and visual way, similar to Trello.",
+  "keywords": [],
+  "homepage": "https://github.com/arnaldo-de-melo-dev99/AI-Highlight-Generator#readme",
+  "bugs": {
+    "url": "https://github.com/arnaldo-de-melo-dev99/AI-Highlight-Generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnaldo-de-melo-dev99/AI-Highlight-Generator.git"
+  },
+  "license": "MIT",
+  "author": "Arnaldo de Melo",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx server/src/http/server.ts",
+    "dev": "tsx --env-file .env --watch server/src/http/server.ts",
+    "seed": "tsx --env-file .env server/src/db/seed.ts",
+    "migrate": "drizzle-kit migrate --config drizzle.config.ts",
+    "generate": "drizzle-kit generate --config drizzle.config.ts",
+    "studio": "drizzle-kit studio --config drizzle.config.ts --port 4984"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "@paralleldrive/cuid2": "^3.3.0",
+    "dayjs": "^1.11.20",
+    "dotenv": "^17.3.1",
+    "drizzle-orm": "^0.45.2",
+    "fastify": "^5.8.4",
+    "fastify-type-provider-zod": "^6.1.0",
+    "postgres": "^3.4.8",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.9",
+    "@types/node": "^25.5.0",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}
