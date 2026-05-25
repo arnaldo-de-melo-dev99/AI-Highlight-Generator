@@ -11,8 +11,13 @@ import { AppError } from "../errors/app-error";
 import { createGoalCompletionsRoute } from "./routes/create-completions";
 import { getWeekSummaryRoute } from "./routes/get-week-summary";
 import { getPendingGoalsRoute } from "./routes/get-pending-goals";
+import fastifyCors from "@fastify/cors";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
+
+app.register(fastifyCors, {
+    origin: "*",
+});
 
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
