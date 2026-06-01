@@ -1,4 +1,8 @@
 # Logs
+.codex
+.agents
+.codex-logs
+.agents-logs
 .vscode
 logs
 *.log
